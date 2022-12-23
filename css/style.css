@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,300;1,300&family=Unbounded:wght@800&display=swap');
+
+:root {
+
+    --bg-color : rgb(20, 20, 43);
+    --left-link : rgb(4, 135, 226);
+    --right-link : rgb(4, 99, 202);
+    --left-active : rgb(176, 214, 245);
+    --left-hover : rgb(101, 194, 245);
+    --color05 : rgb(9, 177, 236);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--bg-color);
+
+    display: grid;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+
+}
+
+@media (min-width: 1024px) {
+    body {
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: repeat(5,20vh);
+    }
+
+    /* Navigation */
+
+    .navigation-left {
+        grid-column: 1/2;
+        grid-row: 1/5;
+        display: flex;
+        
+        padding-top: 5em;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 4em;
+        align-items: center;
+    }
+
+    .navigation-left a {
+        transform: rotate(-90deg);
+        text-decoration: none;
+        color: var(--left-link);
+        font-family: 'Chivo Mono', monospace;
+    }
+
+    .navigation-left a:hover {
+        font-size: 1.5em;
+        font-style: italic;
+        color: var(--left-hover);
+    }
+
+    .navigation-left a:active {
+        font-size: 1.5em;
+        font-style: italic;
+        color: var(--left-active);
+    }
+
+    .navigation-left-line {
+        background: var(--left-link);
+        width: 1px;
+        height: 100px;
+    }
+
+    /* Main */
+
+    .main {
+        grid-column: 2/6;
+        grid-row: 4/5;
+        padding-left: 4em;
+    }
+
+    .main-name {
+        color: var(--left-link);
+        font-family: 'Chivo Mono', monospace;
+        font-size: 1.5em;
+    }
+
+    .main-paragraph {
+        color: var(--left-link);
+        font-family: 'Chivo Mono', monospace;
+        font-size: 1em;
+    }
+
+    .main-paragraph:nth-of-type(2) {
+        font-size: 0.8em;
+        font-style: italic;
+    }
+
+    /* Aside Navigation */
+
+    .navigation-right {
+        grid-column: 6/13;
+        grid-row: 2/5;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation-right__link {
+        text-decoration: none;
+        font-size: 7.5em;
+        font-family: 'Unbounded', cursive;
+        color: var(--right-link);
+    }
+
+    .navigation-right__link:hover {
+        font-style: italic;
+        padding-left: 0.25em;
+        text-shadow: var(--color05) 2px 2px 5px;
+        transition: 0.2s;
+    }
+}
+
+
+
